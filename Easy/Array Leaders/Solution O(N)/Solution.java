@@ -33,7 +33,7 @@ class Solution {
         }
 
 
-        Collections.reverse(ans);
+        Collections.reverse(ans);   //maintain the order of the leaders
         return ans;
     }
 
