@@ -40,25 +40,16 @@ class Solution {
         System.out.print(ele+" ");
         sc.close();
     }
-    public static ArrayList<Integer> countLessEq(int a[], int b[]) {
-        // code here
+    static ArrayList<Integer> countLessEq(int a[], int b[]){
         ArrayList<Integer> ans = new ArrayList<>();
-        Arrays.sort(b);
         for(int ele: a){
-            int count = binarySearch(ele, b);
+            int count= 0;
+            for(int num:b){
+                if(num<=ele)count++;
+            }
             ans.add(count);
         }
         return ans;
-    }
-    static int binarySearch(int ele, int arr[]){
-        int low=0, high=arr.length;
-        while(low<high){
-            int mid = (low+high)/2;
-            if(arr[mid]<=ele)
-            low=mid+1;
-            else high = mid;
-        }
-        return low;
     }
     
 }
