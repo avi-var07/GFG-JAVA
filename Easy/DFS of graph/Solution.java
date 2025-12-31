@@ -46,17 +46,7 @@ class Solution{
             adj.get(v).add(u);
 
         }
-    /*Printing Adjacency List
-
-        for(int i=1;i<=n;i++){
-            System.out.print(i+" ->");
-            for(int j=0;j<adj.get(i).size();j++)System.out.print(adj.get(i).get(j)+" ");
-
-            System.out.println();
-        }
-
-    */
-
+ 
         ArrayList<Integer>bfs = dfs(adj);
 
         for(var ele: bfs)System.out.print(ele+" ");
